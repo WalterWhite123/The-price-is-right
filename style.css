@@ -1,0 +1,87 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+h1{
+    border: 5px black solid;
+    text-align: center;
+    background-color: rgb(231, 228, 231);
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    align-items: center;
+
+}
+
+#hints{
+    border: 2px solid black;
+    font-size: 24px;
+        background-color: rgb(231, 228, 231);
+        padding: 12px 30px;
+
+}
+
+#input{
+    padding: 25px 50px;
+    font-size: 25px;
+}
+
+#chrono{
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid black;
+    padding: 12px;
+        background-color: rgb(231, 228, 231);
+}
+
+
+#endPanel{
+    font-size: 25px;
+    padding: 30px;
+    width: 415px;
+    border : 2px solid black;
+    margin:auto;
+    text-align: center;
+    background-color: rgb(231, 228, 231);
+
+}
+
+#play{
+font-size: 20px;
+display : block;
+margin:auto;
+padding: 8px 40px;
+background-color: rgb(60, 58, 60);
+color: white;
+
+}
+
+#play:hover{
+color: rgb(60, 58, 60);
+background-color: white;
+cursor:pointer;
+}
+
+
+
+.big-wrapper{
+    background-color: rgb(124, 141, 141);
+    gap:50px;
+    margin:auto;
+    width: 900px;
+    padding:100px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    border: 2px solid black;
+    margin-top: 200px;
+}
+
