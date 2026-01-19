@@ -10,15 +10,22 @@
 
 function game(random_number){
     let guess;
-    while (guess != random_number){
+    let time = 5;
+   let game = setInterval(function(){
+        console.log(time);
+        --time;
+        if (guess == random_number || time < 0){
+            game = clearInterval(game);
+        }
         guess = prompt("Take a guess: ");
         if (guess > random_number){
-            alert("less");
+            console.log("less")
         }
         else if (guess < random_number){
-            alert("more");
+            console.log("more");
         }
-    }
+    
+    },1000);
 
     
 }
@@ -46,10 +53,11 @@ function timer(seconds){
     }
 },1000)
     if (sec < 0){
-        return 1;
+        return -1;
     }
 }
 
 
 
 
+game(30);
