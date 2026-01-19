@@ -34,7 +34,8 @@ input.addEventListener("keyup",function(e){
         console.log("more");
         hint.textContent = "more";
     }
-    else{
+    else if (guess == random_number){
+
         clearInterval(timer);
         console.log("you won");
         endPanel.textContent = "You won";
