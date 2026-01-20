@@ -42,10 +42,11 @@ endPanel.textContent = "Enjoy";
              clearInterval(timer);
              if (guess != random_number)
                 endPanel.textContent = "You lost";
-                
+              
         }
            
     },1000)
+    playBtn.addEventListener("click",()=> clearInterval(timer));
 }
 
 
