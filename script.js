@@ -35,7 +35,7 @@ hintPanel.textContent = "Ready ?";
 endPanel.textContent = "Enjoy";
 
 //Timer
-    let seconds = 5;
+    let seconds = 90;
     let timer = setInterval(()=>{
         if (seconds == 30){
             chronoPanel.style.cssText = "background-color:#FFFF38;";
@@ -61,7 +61,7 @@ endPanel.textContent = "Enjoy";
 
 
 playBtn.addEventListener("click",()=>{
-    random_number = Math.floor(Math.random()*31);
+    random_number = Math.floor(Math.random()*1001);
     console.log(random_number);
     game();
 });
