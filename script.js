@@ -5,7 +5,8 @@ hintPanel = document.querySelector("#hints");
 
 
 let guess;
-let random_number = 30;
+let random_number;
+
 
 input.addEventListener("keyup",function(event){
     if (event.keyCode == "13"){
@@ -26,7 +27,14 @@ input.addEventListener("keyup",function(event){
 
 
 function game(){
-    let seconds = 10;
+// Reset
+input.value = "";
+chronoPanel.textContent = 90;
+hintPanel.textContent = "Ready ?"; 
+endPanel.textContent = "Enjoy";
+
+//Timer
+    let seconds = 90;
     let timer = setInterval(()=>{
         chronoPanel.textContent= seconds;
         seconds--; 
@@ -34,11 +42,15 @@ function game(){
              clearInterval(timer);
              if (guess != random_number)
                 endPanel.textContent = "You lost";
+                
         }
            
-
     },1000)
 }
 
 
-game();
+playBtn.addEventListener("click",()=>{
+    random_number = Math.floor(Math.random()*31);
+    console.log(random_number);
+    game();
+});
