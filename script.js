@@ -30,12 +30,19 @@ function game(){
 // Reset
 input.value = "";
 chronoPanel.textContent = 90;
+chronoPanel.style.cssText = "background-color: rgb(231, 228, 231);"
 hintPanel.textContent = "Ready ?"; 
 endPanel.textContent = "Enjoy";
 
 //Timer
     let seconds = 90;
     let timer = setInterval(()=>{
+        if (seconds == 30){
+            chronoPanel.style.cssText = "background-color:#FFFF38;";
+        }
+        if (seconds == 10){
+            chronoPanel.style.cssText = "background-color:#FF5B61;";
+        }
         chronoPanel.textContent= seconds;
         seconds--; 
         if (seconds < 0 || guess == random_number){
