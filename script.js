@@ -35,7 +35,7 @@ hintPanel.textContent = "Ready ?";
 endPanel.textContent = "Enjoy";
 
 //Timer
-    let seconds = 90;
+    let seconds = 5;
     let timer = setInterval(()=>{
         if (seconds == 30){
             chronoPanel.style.cssText = "background-color:#FFFF38;";
@@ -49,6 +49,9 @@ endPanel.textContent = "Enjoy";
              clearInterval(timer);
              if (guess != random_number)
                 endPanel.textContent = "You lost";
+                setTimeout(() => {
+                    endPanel.textContent = `The number was ${random_number}`
+                }, 2000);
               
         }
            
